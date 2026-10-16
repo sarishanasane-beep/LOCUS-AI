@@ -1,0 +1,26 @@
+# JavaScript dependencies and production output
+node_modules/
+dist/
+
+# Local environment files and logs
+.env
+.env.*
+!.env.example
+*.log
+dev-server.log
+
+# Python environments and generated cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Vendored reference project - not part of the LOCUS application source
+vendor/
