@@ -24,3 +24,20 @@ Thumbs.db
 
 # Vendored reference project - not part of the LOCUS application source
 vendor/
+
+# Local generated experiment outputs
+outputs/
+screenshot_test.png
+sim_desktop.png
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Temporary browser debugging scripts
+scripts/capture_*.mjs
+scripts/cdp_screenshot.mjs
+scripts/debug_browser_fetch.mjs
+scripts/inspect_analytics_buttons.mjs
+scripts/take_screenshots.mjs
+scripts/test_*.mjs
+scripts/trace_*.mjs

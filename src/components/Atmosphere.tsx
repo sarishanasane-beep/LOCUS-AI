@@ -11,7 +11,7 @@ export function Atmosphere({ compact = false, fullScreen = false }: { compact?: 
   const reduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
   return <div className={`shader-atmosphere ${compact ? 'is-compact' : ''} ${fullScreen ? 'is-fullscreen' : ''}`} aria-hidden="true">
     <ShaderBoundary>
-      <ShaderGradientCanvas pixelDensity={2.1} fov={45} style={{ position: 'absolute', inset: 0 }}>
+      <ShaderGradientCanvas pixelDensity={1.0} fov={45} style={{ position: 'absolute', inset: 0 }}>
         <ShaderGradient
           animate={reduced ? 'off' : 'on'}
           brightness={0.3}
@@ -23,7 +23,7 @@ export function Atmosphere({ compact = false, fullScreen = false }: { compact?: 
           color2="#4b72dc"
           color3="#90c9ce"
           envPreset="lobby"
-          grain="on"
+          grain="off"
           lightType="env"
           positionX={-0.1}
           positionY={0}
@@ -31,17 +31,17 @@ export function Atmosphere({ compact = false, fullScreen = false }: { compact?: 
           range="disabled"
           rangeEnd={40}
           rangeStart={0}
-          reflection={0.3}
+          reflection={0.2}
           rotationX={0}
           rotationY={130}
           rotationZ={70}
           shader="defaults"
           type="sphere"
-          uAmplitude={0.9}
-          uDensity={3.3}
+          uAmplitude={0.7}
+          uDensity={2.0}
           uFrequency={5.5}
-          uSpeed={reduced ? 0 : 0.2}
-          uStrength={0.2}
+          uSpeed={reduced ? 0 : 0.15}
+          uStrength={0.18}
           uTime={0}
           wireframe={false}
         />
